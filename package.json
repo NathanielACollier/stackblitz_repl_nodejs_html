@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node tools/startWeb.js"
+    "start_server": "node index.js",
+    "start_web": "node tools/startWeb.js",
+    "start": "npm run start_server & npm run start_web"
   },
   "dependencies": {
     "express": "^4.17.1"
