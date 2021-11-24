@@ -7,6 +7,9 @@ app.get('/', async (req, res) => {
   res.send(await generateTableOfContents());
 });
 
+// serve the pages
+app.use('/pages', express.static('pages'));
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
