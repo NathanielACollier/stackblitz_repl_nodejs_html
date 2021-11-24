@@ -3,8 +3,8 @@ import {generateTableOfContents} from './server/TOC_Generator';
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send(generateTableOfContents());
+app.get('/', async (req, res) => {
+  res.send(await generateTableOfContents());
 });
 
 app.listen(port, () => {
